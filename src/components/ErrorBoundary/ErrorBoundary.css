@@ -1,0 +1,15 @@
+.error-boundary
+{
+    font-family: inherit;
+    font-size: 1em;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: #882833;
+    color: #FFF;
+}

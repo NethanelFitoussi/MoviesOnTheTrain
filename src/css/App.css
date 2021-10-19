@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh;
+}
+
+.app-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: url( 'https://st3.depositphotos.com/2540823/14153/i/450/depositphotos_141531432-stock-photo-tv-studio-backdrop-for-tv.jpg' );
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.Toastify__toast-body
+{
+    font-family: Montserrat, sans-serif;
+}
+
+
+.not-found-container
+{
+    background-color: rgba( 0,0,0,.2 );
+    box-shadow: 0 0 10px 0 rgba( 0,0,0,.3 );
+    margin: 5rem auto auto;
+    color: #FFF;
+    padding: 2rem 1rem;
+    width: 90vw;
+    max-width: 800px;
+    text-align: center;
+}
+
+.not-found-container h1
+{
+    margin: 0;
+}
+
+.not-found-container a
+{
+    color: inherit;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    background-color: #E0AA1F;
+    border-radius: 1rem;
+    display: inline-block;
+    transition: .3s all;
+}
+
+.not-found-container a:hover,
+.not-found-container a:focus
+{
+    background-color: #d39804;
+}
+
+
+/*
+    Light Theme
+*/
+.light-theme .not-found-container
+{
+    background-color: rgba( 255,255,255,.3 );
+    color: #333;
+}
+
+
+/*
+    Responsiveness
+*/
+@media screen and ( max-width: 1024px )
+{
+    .forecast-container .forecast-day
+    {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and ( max-width: 768px )
+{
+    .header
+    {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .header-title
+    {
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .hero .hero-title,
+    .hero .hero-subtitle .temperature
+    {
+        font-size: 2rem;
+    }
+
+    .auto-complete-input
+    {
+        font-size: 1rem;
+    }
+
+    .favorites-view h1
+    {
+        font-size: 1.7rem;
+    }
+
+    .favorite-box
+    {
+        padding: 1.5rem;
+    }
+
+    .favorites-view
+    {
+        padding: 2rem;
+    }
+
+    .forecast-container .forecast-day
+    {
+        flex: 1 0 33%;
+        padding: 1.5rem;
+        font-size: 1rem;
+        border-right: none;
+        border-bottom: 1px solid rgba( 255,255,255,.2 );
+    }
+}
+
+@media screen and ( max-width: 500px )
+{
+    .navigation-container
+    {
+        font-size: .9rem;
+    }
+
+    .forecast-container .forecast-day
+    {
+        flex: 1 0 50%;
+    }
+
+    .hero .hero-title
+    {
+        font-size: 2rem;
+    }
+
+    .light-theme .forecast-container .forecast-day
+    {
+        border-bottom: 1px solid rgba( 0,0,0,.2 );
+    }
+
+    .favorites-view h1
+    {
+        font-size: 1.5rem;
+    }
+
+    .favorite-box .location-name,
+    .favorite-box .temperature
+    {
+        font-size: 1rem;
+    }
+}
+
+
+/*
+    Animations
+*/
+@keyframes spin
+{
+    from { transform: rotate( 0 ); }
+    to { transform: rotate( 360deg ); }
+}
+
+@keyframes bounce
+{
+    0%, 50%, 100%
+    {
+        transform: scale( 1 );
+    }
+
+    25%, 75%
+    {
+        transform: scale( 1.2 );
+    }
+}

@@ -1,0 +1,111 @@
+.navigation-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation-container a
+{
+    text-decoration: none;
+    color: #FFF;
+    padding: .5rem 1rem;
+    outline: none;
+    position: relative;
+    transition: .3s all;
+}
+
+.navigation-container a:not( :last-child )
+{
+    margin-right: .5rem;
+}
+
+.navigation-container a:hover
+{
+    color: #E0AA1F;
+}
+
+.navigation-container a::after
+{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #E0AA1F;
+    bottom: 0;
+    left: 25%;
+    transition: .3s all;
+}
+
+.navigation-container a.active::after
+{
+    width: 50%;
+}
+
+.navigation-container .toggle-button
+{
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 2px solid rgba( 0,0,0,.1 );
+    color: #FFF;
+    font-size: 1em;
+    padding: .5rem .7rem;
+    font-family: inherit;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s all;
+}
+
+.navigation-container .toggle-unit-button::after
+{
+    content: '°';
+}
+
+.navigation-container .toggle-button:hover
+{
+    background-color: rgba( 0,0,0,.2 );
+}
+
+
+.navigation-container .toggle-theme-button
+{
+    padding: .5rem;
+}
+
+.navigation-container .toggle-theme-button .icon
+{
+    height: 1.2em;
+}
+
+.navigation-container .toggle-theme-button .icon-sun
+{
+    fill: #da7714;
+}
+
+.navigation-container .toggle-theme-button .icon-moon
+{
+    fill: #FFF;
+    filter: drop-shadow( 0 0 5px rgba( 0,0,0,.5 ) );
+}
+
+
+/*
+    Light Theme
+*/
+.light-theme .navigation-container a:not( :hover ),
+.light-theme .navigation-container .toggle-button
+{
+    color: #333;
+}
+
+.navigation-container .toggle-button:hover
+{
+    background-color: rgba( 0,0,0,.2 );
+}

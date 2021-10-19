@@ -1,0 +1,26 @@
+.header
+{
+    background-color: rgba(50, 90, 90, 0.5);
+    padding: 1rem 2rem;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px 0 rgba( 0,0,0,.5 );
+    transition: .3s all;
+}
+
+.header h1
+{
+    margin: 0;
+}
+
+
+/*
+    Light Theme
+*/
+.light-theme .header
+{
+    background-color: rgba( 255,255,255,.3 );
+    color: #333;
+}
