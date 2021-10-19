@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { useIcon } from '../../hooks';
-import { Details } from '../../pages';
-import { Loader } from '../Loader';
 import './FavoriteBox.css';
 
 function FavoriteBox({ favorite })
@@ -18,15 +15,15 @@ function FavoriteBox({ favorite })
                 { favorite.LocalizedName }
             </h3>
 
-            <WeatherData location={ favorite }/>
+            <ShowData location={ favorite }/>
 
         </div>
     )
 }
 
 
-// display weather data after loading
-function WeatherData({ location })
+// display show data after loading
+function ShowData({ location })
 {
     console.log('location', location);
     let {

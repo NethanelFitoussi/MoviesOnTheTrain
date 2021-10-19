@@ -5,7 +5,7 @@ import { compose } from 'redux';
 import { useDispatch } from 'react-redux';
 import { Header } from './components/Header';
 import { Details, Home, NotFound } from './pages';
-import { setCurrentWeatherLoading, setForecastLoading } from './redux';
+import { setForecastLoading } from './redux';
 
 import './css/App.css';
 

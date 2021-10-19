@@ -1,7 +1,7 @@
 import ACTIONS from './actionTypes';
 
 
-export const setCurrentWeather = ( [ current ], name = '', locationKey = '' ) => {
+export const setCurrentShow = ( [ current ], name = '', locationKey = '' ) => {
 
     current = current || {};
     current.Name = name;
@@ -26,7 +26,7 @@ export const setForecast = ( forecast ) => {
 
 }
 
-export const setCurrentWeatherLoading = ( isLoading ) => {
+export const setCurrentShowLoading = ( isLoading ) => {
 
     return {
         type: ACTIONS.SET_CURRENT_LOADING,
