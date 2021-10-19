@@ -10,7 +10,7 @@ function ForecastView()
 {
     const dispatch = useDispatch();
 
-    const list = useSelector( state => state.weather );
+    const list = useSelector( state => state.show );
     console.log('list', list);
 
 

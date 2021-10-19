@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams  } from 'react-router-dom';
-import { setCurrentWeatherLoading, setForecastLoading } from '../../redux';
 import { apiForecast } from '../../redux/middlewares/api';
 import { FavoriteBox } from '../FavoriteBox';
 import { withErrorBoundary } from '../../HOCs';
@@ -9,7 +8,7 @@ import './DetailsView.css';
 
 function DetailsView()
 {
-    const list = useSelector( state => state.weather );
+    const list = useSelector( state => state.show );
     const history = useHistory();
     const dispatch = useDispatch();
     const params = useParams();

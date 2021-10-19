@@ -16,7 +16,7 @@ const reducer = ( state = defaultState, { type, payload } ) => {
             return remove( state, payload.location );
 
         case ACTIONS.SET_WEATHER:
-            return setWeather( state, payload.locationKey, payload.weather );
+            return setShow( state, payload.locationKey, payload.show );
 
         default:
             return state;
@@ -47,7 +47,7 @@ const remove = ( state, location, showToast = true ) => {
 
 }
 
-const setWeather = ( state, locationKey, weather ) => {
+const setShow = ( state, locationKey, show ) => {
 
     const id = state.findIndex( l => ( l.LocationKey === locationKey ) );
 
@@ -55,7 +55,7 @@ const setWeather = ( state, locationKey, weather ) => {
         return state;
 
     let updated = [ ...state ];
-    updated[id].currentWeather = weather;
+    updated[id].currentShow = show;
 
     return updated;
 

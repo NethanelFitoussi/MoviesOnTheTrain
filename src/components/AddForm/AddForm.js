@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setAddForm, setCurrentWeatherLoading, setForecastLoading } from '../../redux';
-import { apiAddForm, apiForecast } from '../../redux/middlewares/api';
+import { setAddForm } from '../../redux';
+import { apiAddForm } from '../../redux/middlewares/api';
 import { withErrorBoundary } from '../../HOCs';
 import { useFavorite } from '../../hooks';
 import './AddForm.css';
@@ -10,7 +10,6 @@ import './AddForm.css';
 function AddForm()
 {
     const [ value, setValue ] = useState( '' );
-    const [ currentItem, setCurrentItem ] = useState( -1 );
     const [ loading, setLoading ] = useState( false );
     const dispatch = useDispatch();
     const suggestions = useSelector( state => state.AddForm );
